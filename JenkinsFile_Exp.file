@@ -1,0 +1,29 @@
+pipeline{
+    agent any
+    stages{
+        stage("JAVA Program"){
+            steps{
+                echo 'JAVA PROGRAM ->'
+                build job: 'Addition'
+            }
+        }
+        stage("GROOVY Program"){
+            steps{
+                echo 'GROOVY PROGRAM ->'
+                build job: 'GroovyProgram'
+            }
+        }
+        stage("PYTHON Program"){
+            steps{
+                echo 'PYTHON PROGRAM'
+                build job: 'PythonProgram'
+            }
+        }
+        stage("VbScript Program"){
+            steps{
+                echo 'VbScript PROGRAM ->'
+                build job: 'VBSCRIPT_Program'
+            }
+        }
+    }
+}
