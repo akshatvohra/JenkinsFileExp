@@ -1,0 +1,19 @@
+pipeline{
+	agent any
+	stages{
+		stage('Sequential Execution Stage'){
+			stages{
+				stage('Sequential Stage 1'){
+					steps{
+						echo 'I will be executed First!!!!!'
+					}
+				}
+				stage('Sequential Stage 2'){
+					steps{
+						echo 'I will be executed Second!!!!!1'
+					}
+				}
+			}
+		}
+	}
+}
