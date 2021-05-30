@@ -13,6 +13,20 @@ pipeline{
 						echo 'I will be executed Second!!!!!1'
 					}
 				}
+				stage('Parallel Execution Stage'){
+					parallel{
+						stage('Parallel Stage -1'){
+							steps{
+								echo 'PARALLEL - 1'
+							}
+						}
+						stage('Parallel Stage -2'){
+							steps{
+								echo 'PARALLE - 2'
+							}
+						}
+					}
+				}
 			}
 		}
 	}
