@@ -1,4 +1,4 @@
-currentBuild.displayName = "${params.BuildName}"
+currentBuild.displayName = "${params.BRANCH}_Execution"
 pipeline{
 	agent any
 	stages{
