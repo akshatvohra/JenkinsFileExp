@@ -1,4 +1,4 @@
-currentBuild.displayName = 'JAVA_Execution'
+currentBuild.displayName = "${params.BuildName}"
 pipeline{
 	agent any
 	stages{
