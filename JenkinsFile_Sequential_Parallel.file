@@ -1,3 +1,4 @@
+currentBuild.displayName = 'JAVA_Execution'
 pipeline{
 	agent any
 	stages{
@@ -37,7 +38,7 @@ pipeline{
 			}
 			steps{
 				echo 'JAVA PROGRAM ->'
-                build job: 'Addition'
+				build job: 'Addition'
 			}
 		}
 	}
