@@ -29,5 +29,16 @@ pipeline{
 				}
 			}
 		}
+		stage('Program Execution'){
+			when{
+				expression{
+					return params.BRANCH == 'JAVA'
+				}
+			}
+			steps{
+				echo 'JAVA PROGRAM ->'
+                build job: 'Addition'
+			}
+		}
 	}
 }
